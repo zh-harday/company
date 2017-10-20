@@ -47,6 +47,8 @@
         </el-row>
         <el-row class="tabBotm">
           <el-col :span="6" :offset="4" class="">
+              <img src="static/img/about/left.svg" alt=""/>
+              <img src="static/img/about/right.svg" alt=""/>
               <el-tabs class="elTabs" v-model="activeName2" type="card" @tab-click="handleClick">
                 <el-tab-pane label="服务员" name="first">
                   <div class="tabPosi">
@@ -76,7 +78,7 @@
                     </div>
                   </div>
                 </el-tab-pane>
-                <div></div>
+                <!-- left right btn -->
               </el-tabs>
           </el-col>
           <el-col :span="6" class="ruleForm2">
@@ -228,10 +230,10 @@
   .company {
     margin-left: 27%;
   }
-  .company1{
+  .company1 {
     margin-left: 4%;
   }
-  .company2{
+  .company2 {
     margin-left: 4%;
   }
   > div {
@@ -280,8 +282,20 @@
 }
 .tabBotm {
   margin-bottom: 90px;
-  .elTabs {
+  >div{
     position: relative;
+
+    > img {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    >img:nth-child(1){
+      margin-right: 20px;
+    }
+  }
+  .elTabs {
   }
 }
 .tabPosi {
